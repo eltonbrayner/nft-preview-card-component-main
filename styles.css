@@ -1,0 +1,135 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --very-dark-blue-cardbg: hsl(216, 50%, 16%);
+  --very-dark-blue-mainbg: hsl(217, 54%, 11%);
+  --primary-cyan: hsl(178, 100%, 50%);
+  --primary-cyan-opacity: rgba(12, 160, 180, 0.555);
+  --primary-soft-blue: hsl(215, 51%, 70%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-soft-blue);
+  background-color: var(--very-dark-blue-mainbg);
+  font-family: 'Outfit', sans-serif;
+}
+
+.card {
+  padding: 1rem;
+  background-color: var(--very-dark-blue-cardbg);
+
+  display: flex;
+  flex-direction: column;
+  max-width: 18rem;
+
+  border-radius: 12px;
+  position: relative;
+}
+
+.card-img > img {
+  width: 16rem;
+
+  display: block;
+  height: auto;
+
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.card-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img:hover .overlayer {
+  top: 0;
+  cursor: pointer;
+}
+
+.overlayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-cyan-opacity);
+}
+
+.title {
+  display: block;
+  margin: 1rem 0;
+
+  font-weight: 600;
+}
+
+.content {
+  font-weight: 300;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper > .side:first-child > span {
+  color: var(--primary-cyan);
+}
+
+.wrapper .side span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.side {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.card .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+
+.white-text {
+  color: var(--white);
+}
+
+.white-text:hover {
+  cursor: pointer;
+  color: var(--primary-cyan);
+}
+
+.footer {
+  padding: 1rem 0;
+  border-top: solid 1px var(--very-dark-blue-line);
+
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+
+.footer img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  border: solid 1px var(--white);
+  border-radius: 50%;
+}
